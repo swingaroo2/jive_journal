@@ -6,8 +6,10 @@
 //
 
 struct Strings {
-    // MARK: - Login
+    // MARK: - Branding
     static let jiveJournal = "Jive Journal"
+
+    // MARK: - Login
     static let username = "Username"
     static let password = "Password"
     static let signInToYourAccount = "Sign in to your account"

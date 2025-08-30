@@ -1,19 +1,10 @@
-This is a Kotlin Multiplatform project targeting Android, iOS.
+# JiveJournal
 
-* [/composeApp](./composeApp/src) is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - [commonMain](./composeApp/src/commonMain/kotlin) is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    the [iosMain](./composeApp/src/iosMain/kotlin) folder would be the right place for such calls.
-    Similarly, if you want to edit the Desktop (JVM) specific part, the [jvmMain](./composeApp/src/jvmMain/kotlin)
-    folder is the appropriate location.
+In dance practice, we often make videos and take notes. However, navigating large video collections alone can be cumbersome with native tools in the mobile OS. The problem compounds with the addition of notes, which should be conveniently coupled with relevant videos. Again, native mobile tools fall short in offerring the necessary flexibility and intuitiveness of a coherent solution. 
 
-* [/iosApp](./iosApp/iosApp) contains iOS applications. Even if you’re sharing your UI with Compose Multiplatform,
-  you need this entry point for your iOS app. This is also where you should add SwiftUI code for your project.
+JiveJournal fills this tooling gap with
+* Separation from broad-purpose mobile notes applications, simplifying access to dance content
+* User-defined tagging and filtering, tailoring your organizational scheme to your preferences
+* Proximity between text and video content, saving time navigating between the two
 
-* [/shared](./shared/src) is for the code that will be shared between all targets in the project.
-  The most important subfolder is [commonMain](./shared/src/commonMain/kotlin). If preferred, you can add code to the platform-specific folders here too.
-
-
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)…
+As a Kotlin Multiplatform Mobile project, JiveJournal will be available on both iOS and Android platforms. This way, the shared internal logic creates a consistent cross-platform experience which leverages native mobile tools.

@@ -2,9 +2,17 @@ import SwiftUI
 
 @main
 struct iOSApp: App {
+    @State private var needsLogin: Bool = false
+    
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            CollectionsView()
+                .fullScreenCover(isPresented: $needsLogin) {
+                    LoginView()
+                }
+                .onAppear {
+                    needsLogin = UserDefaults.isFirstLaunch()
+                }
         }
     }
 }
